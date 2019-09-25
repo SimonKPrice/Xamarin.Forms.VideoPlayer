@@ -365,7 +365,17 @@ namespace Octane.Xamarin.Forms.VideoPlayer.Android.Renderers
                 if (!string.IsNullOrEmpty(path))
                 {
                     Element.SetValue(VideoPlayer.CurrentTimePropertyKey, TimeSpan.Zero);
-                    Control.SetVideoPath(path);
+                    
+                    // Add custom request headers
+                    if (Element.Headers?.Count>0)
+                    {
+                        Control.SetVideoURI(global::Android.Net.Uri.Parse(path), Element.Headers);
+                    }
+                    else
+                    {
+                        Control.SetVideoPath(path);
+                    }
+
                     Element.OnPlayerStateChanged(CreateVideoPlayerStateChangedEventArgs(PlayerState.Initialized));
                 }
             }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Windows.Input;
 using Octane.Xamarin.Forms.VideoPlayer.Constants;
 using Octane.Xamarin.Forms.VideoPlayer.Diagnostics;
@@ -308,6 +309,28 @@ namespace Octane.Xamarin.Forms.VideoPlayer
             get => (VideoSource) GetValue(SourceProperty);
             set => SetValue(SourceProperty, value);
         }
+
+        #endregion
+
+        #region Headers
+
+        /// <summary>
+        /// The source bindable property.
+        /// </summary>
+        public static readonly BindableProperty HeadersProperty = BindableProperty.Create(nameof(Headers), typeof(Dictionary<string,string>), typeof(VideoPlayer), null);
+
+        /// <summary>
+        /// A Dictionary of headers
+        /// </summary>
+        /// <value>
+        /// Dictionary name value pairs of headers
+        /// </value>
+        public Dictionary<string, string> Headers
+        {
+            get => (Dictionary<string,string>)GetValue(HeadersProperty);
+            set => SetValue(HeadersProperty, value);
+        }
+
 
         #endregion
 

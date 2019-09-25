@@ -401,7 +401,27 @@ namespace Octane.Xamarin.Forms.VideoPlayer.iOS.Renderers
 
                     _playerControl.Player.CurrentItem?.RemoveObserver(FromObject(this), "status");
 
-                    _playerControl.Player.ReplaceCurrentItemWithPlayerItem(AVPlayerItem.FromUrl(pathUrl));
+                    // Add any custom request headers
+                    var headersSource = Element.Headers;
+                    if (headersSource?.Count>0)
+                    {
+                        NSMutableDictionary headers = new NSMutableDictionary();
+
+                        foreach (var headeritem in headersSource)
+                        {
+                            headers.SetValueForKey(NSObject.FromObject(headeritem.Value), new NSString(headeritem.Key));
+                        }
+
+                        var dict = new NSDictionary(@"AVURLAssetHTTPHeaderFieldsKey", headers);
+                        var asset = new AVUrlAsset(pathUrl, dict);
+
+                        AVPlayerItem item = new AVPlayerItem(asset);
+                        _playerControl.Player.ReplaceCurrentItemWithPlayerItem(item);
+                    }
+                    else
+                    {
+                        _playerControl.Player.ReplaceCurrentItemWithPlayerItem(AVPlayerItem.FromUrl(pathUrl));
+                    }
 
                     _playerControl.Player.CurrentItem.AddObserver(this, (NSString)"status", 0, Handle);
 
