@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Imparta.Xam.VideoPlayer</id>
+    <version>3.1.2</version>
+    <authors>Imparta.Xamarin.Forms.VideoPlayer</authors>
+    <owners>Imparta.Xamarin.Forms.VideoPlayer</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/SimonKPrice/Xamarin.Forms.VideoPlayer/blob/master/License.md</licenseUrl>
+    <projectUrl>https://github.com/SimonKPrice/Xamarin.Forms.VideoPlayer</projectUrl>
+    <iconUrl>https://github.com/SimonKPrice/Xamarin.Forms.VideoPlayer/raw/master/icons/VideoPlayer_128x128.png</iconUrl>
+    <description>A Xamarin Forms control to render the native video player on every platform, and include request headers in each request.</description>
+    <copyright>Copyright © 2019</copyright>
+    <tags>xamarin forms xamarin.forms ios android windows phone mobile video portable ui AVPlayer MediaPlayer AVPlayerViewController MediaElement pcl xam.pcl wp8 winphone UWP</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Xamarin.Forms" version="4.0.0.497661" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="Xamarin.iOS1.0">
+        <dependency id="Xamarin.Forms" version="4.0.0.497661" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="MonoAndroid8.1">
+        <dependency id="Xamarin.Forms" version="4.0.0.497661" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Imparta.Xamarin.Forms.VideoPlayer.Android\bin\Release\Imparta.Xamarin.Forms.VideoPlayer.Android.dll" target="lib\MonoAndroid81\Imparta.Xamarin.Forms.VideoPlayer.Android.dll" />
+    <file src="Imparta.Xamarin.Forms.VideoPlayer.Android\bin\Release\Imparta.Xamarin.Forms.VideoPlayer.Android.xml" target="lib\MonoAndroid81\Imparta.Xamarin.Forms.VideoPlayer.Android.xml" />
+    <file src="Imparta.Xamarin.Forms.VideoPlayer.Android\bin\Release\Imparta.Xamarin.Forms.VideoPlayer.dll" target="lib\MonoAndroid81\Imparta.Xamarin.Forms.VideoPlayer.dll" />
+    <file src="Imparta.Xamarin.Forms.VideoPlayer.Android\bin\Release\Imparta.Xamarin.Forms.VideoPlayer.xml" target="lib\MonoAndroid81\Imparta.Xamarin.Forms.VideoPlayer.xml" />
+    <file src="Imparta.Xamarin.Forms.VideoPlayer\bin\Release\netstandard2.0\Imparta.Xamarin.Forms.VideoPlayer.dll" target="lib\netstandard2.0\Imparta.Xamarin.Forms.VideoPlayer.dll" />
+    <file src="Imparta.Xamarin.Forms.VideoPlayer\bin\Release\netstandard2.0\Imparta.Xamarin.Forms.VideoPlayer.xml" target="lib\netstandard2.0\Imparta.Xamarin.Forms.VideoPlayer.xml" />
+    <file src="Imparta.Xamarin.Forms.VideoPlayer.UWP\bin\x86\Release\Imparta.Xamarin.Forms.VideoPlayer.dll" target="lib\uap10.0\Imparta.Xamarin.Forms.VideoPlayer.dll" />
+    <file src="Imparta.Xamarin.Forms.VideoPlayer.UWP\bin\x86\Release\Imparta.Xamarin.Forms.VideoPlayer.UWP.dll" target="lib\uap10.0\Imparta.Xamarin.Forms.VideoPlayer.UWP.dll" />
+    <file src="Imparta.Xamarin.Forms.VideoPlayer.UWP\bin\x86\Release\Imparta.Xamarin.Forms.VideoPlayer.UWP.XML" target="lib\uap10.0\Imparta.Xamarin.Forms.VideoPlayer.UWP.XML" />
+    <file src="Imparta.Xamarin.Forms.VideoPlayer.UWP\bin\x86\Release\Imparta.Xamarin.Forms.VideoPlayer.xml" target="lib\uap10.0\Imparta.Xamarin.Forms.VideoPlayer.xml" />
+    <file src="Imparta.Xamarin.Forms.VideoPlayer.iOS\bin\Release\Imparta.Xamarin.Forms.VideoPlayer.dll" target="lib\Xamarin.IOS10\Imparta.Xamarin.Forms.VideoPlayer.dll" />
+    <file src="Imparta.Xamarin.Forms.VideoPlayer.iOS\bin\Release\Imparta.Xamarin.Forms.VideoPlayer.iOS.dll" target="lib\Xamarin.IOS10\Imparta.Xamarin.Forms.VideoPlayer.iOS.dll" />
+    <file src="Imparta.Xamarin.Forms.VideoPlayer.iOS\bin\Release\Imparta.Xamarin.Forms.VideoPlayer.iOS.xml" target="lib\Xamarin.IOS10\Imparta.Xamarin.Forms.VideoPlayer.iOS.xml" />
+    <file src="Imparta.Xamarin.Forms.VideoPlayer.iOS\bin\Release\Imparta.Xamarin.Forms.VideoPlayer.xml" target="lib\Xamarin.IOS10\Imparta.Xamarin.Forms.VideoPlayer.xml" />
+  </files>
+</package>
